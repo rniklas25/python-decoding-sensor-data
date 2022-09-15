@@ -1,3 +1,4 @@
+from datetime import date, datetime
 
 
 class HouseInfo:
@@ -13,3 +14,6 @@ class HouseInfo:
             elif rec_area == int(record['area']):
                 field_data.append(record[field])
         return field_data
+
+    def get_data_by_date(self, field, rec_date=date.today()):
+        field_data = []
